@@ -1,6 +1,6 @@
 import React from "react";
 import { useRef } from "react";
-// import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 // import LoginContext from "../../Context/LoginContext";
 // import classes from "./SignIn.module.css";
 import Form from "../UI/Form";
@@ -25,7 +25,7 @@ const SignIn = () => {
     const pswdValue = pswdRef.current.value;
 
     const response = await fetch(
-      "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyASFlbM8VstNGn2GN7OBxE2-gSNb-9XprI",
+      "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAe2c-LVG1tbj5NhaYcEXqknmKuHHq53BE",
       {
         method: "POST",
         body: JSON.stringify({
@@ -80,7 +80,7 @@ const SignIn = () => {
         />
       </div>
       <Button>Sign In</Button>
-      {/* <Link to="/forgotPassword">Forgot Password?</Link> */}
+      <Link to="/forgotPassword">Forgot Password?</Link>
     </Form>
     </>
   );

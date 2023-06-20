@@ -32,7 +32,7 @@ function SignUp() {
         setConfirmValid(false);
   
         const response = await fetch(
-          "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyASFlbM8VstNGn2GN7OBxE2-gSNb-9XprI",
+          "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key= AIzaSyAe2c-LVG1tbj5NhaYcEXqknmKuHHq53BE",
           {
             method: "POST",
             body: JSON.stringify({
@@ -72,9 +72,9 @@ return (
 
         <Header/>
     <Form onSubmit={signUpSubmitHandler}>
-        <div className={classes.singUp}>
+        <div className={classes.singUp} >
         <div >
-            <h3>
+            <h3 >
                 SignUp
             </h3>
         </div>

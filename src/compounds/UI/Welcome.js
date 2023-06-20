@@ -6,9 +6,11 @@ function Welcome() {
     <>
     <div className={classes.div}>
     <div>
-      Welcome to the page
+     <h1>
+       Welcome to the page
+      </h1>
     </div>
-    <Button>Please Complete your profile</Button>
+    <p>Please Complete your profile</p>
     </div>
     </>
     
