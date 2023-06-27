@@ -1,4 +1,4 @@
-import classes from "./Form.module.css";
+import classes from "../Style/Form.module.css";
 
 const Form = (props) => {
   return (

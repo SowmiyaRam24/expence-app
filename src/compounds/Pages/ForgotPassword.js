@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import Button from "../UI/Button";
-import Form from "../UI/Form";
+import Button from "./Button";
+import Form from "./Form";
 
 const ForgotPassword = () => {
   const forgotEmailRef = useRef("");

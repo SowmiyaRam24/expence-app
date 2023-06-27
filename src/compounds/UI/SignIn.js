@@ -3,11 +3,11 @@ import { useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 // import LoginContext from "../../Context/LoginContext";
 // import classes from "./SignIn.module.css";
-import Form from "../UI/Form";
+import Form from "../Pages/Form";
 // import { useDispatch } from "react-redux";
 // import { AuthActions } from "../../Store/AuthReducer";
-import Button from '../UI/Button';
-import Header from "../UI/header";
+import Button from '../Pages/Button';
+import Header from "../Pages/header";
 
 const SignIn = () => {
   const emailRef = useRef("");
@@ -79,8 +79,8 @@ const SignIn = () => {
           ref={pswdRef}
         />
       </div>
-      <Button>Sign In</Button>
       <Link to="/forgotPassword">Forgot Password?</Link>
+      <Button>Sign In</Button>
     </Form>
     </>
   );

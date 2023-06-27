@@ -1,8 +1,8 @@
 import React,{useRef,useState} from 'react';
 import classes from '../Style/Sign.module.css';
-import Header from '../UI/header';
-import Button from '../UI/Button';
-import Form from '../UI/Form';
+import Header from '../Pages/header';
+import Button from '../Pages/Button';
+import Form from '../Pages/Form';
 
 
 function SignUp() {
