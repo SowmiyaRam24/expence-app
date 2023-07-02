@@ -1,6 +1,6 @@
 import React,{useRef,useState} from 'react';
 import classes from '../Style/Sign.module.css';
-import Header from '../Pages/header';
+import { useHistory } from "react-router-dom";
 import Button from '../Pages/Button';
 import Form from '../Pages/Form';
 
@@ -14,7 +14,7 @@ function SignUp() {
     const [pswdValid, setPswdValid] = useState(false);
     const [confirmValid, setConfirmValid] = useState(false);
   
-    // const history = useHistory();
+    const history = useHistory();
   
     const signUpSubmitHandler = async (event) => {
       event.preventDefault();
@@ -51,7 +51,7 @@ function SignUp() {
           emailRef.current.value = "";
           pswdRef.current.value = "";
           confirmPswdRef.current.value = "";
-        //   history.replace("/signIn");
+          history.replace("/signIn");
         } else {
           alert(data.error.message);
         }
@@ -70,7 +70,7 @@ function SignUp() {
 return (
     <>
 
-        <Header/>
+      
     <Form onSubmit={signUpSubmitHandler}>
         <div className={classes.singUp} >
         <div >
@@ -110,4 +110,4 @@ return (
   )
 }
 
-export default SignUp
+export default SignUp 

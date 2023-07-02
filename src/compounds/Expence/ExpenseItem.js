@@ -17,7 +17,7 @@ const ExpenseItem = (props) => {
             <div>
               <h4>Category: {expenseItem.category}</h4>
               <div className={classes.ButtonItems}>
-                <Button
+                <Button style={{backgroundColor:'pink'}}
                   onClick={props.editExpense.bind(
                     null,
                     expenseItem.id,
@@ -28,7 +28,7 @@ const ExpenseItem = (props) => {
                 >
                   Edit
                 </Button>
-                <Button
+                <Button classes={'className.button'}
                   onClick={props.deleteExpenseHandler.bind(
                     null,
                     expenseItem.id

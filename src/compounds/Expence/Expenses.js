@@ -4,6 +4,7 @@ import ExpenseItem from "./ExpenseItem";
 import { useSelector, useDispatch } from "react-redux";
 import classes from "./Expenses.module.css";
 // import "react-calendar/dist/Calendar.css";
+// import ShowExpenses from "./ShowExpenses";
 import {
   deleteExpenseFetching,
   getExpenseFetching} from "../../store/ActionCreators/ExpenseActionCreators"
@@ -55,15 +56,18 @@ const Expenses = (props) => {
   return (
     <div className={classes.Expenses}>
       <h2>Expenses Items</h2>
+      <button onClick={addExpenseHandler} className={classes.AddButton}>
+        Add Expense
+      </button>
       <div>
         <ExpenseItem
           editExpense={editExpenseHandler}
           deleteExpenseHandler={deleteExpenseHandler}
         />
       </div>
-      <button onClick={addExpenseHandler} className={classes.AddButton}>
+      {/* <button onClick={addExpenseHandler} className={classes.AddButton}>
         +
-      </button>
+      </button> */}
       {addFormState && (
         <ExpencesForm
           onClose={onCloseAddStateHandler}

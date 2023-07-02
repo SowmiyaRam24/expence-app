@@ -18,7 +18,6 @@
   
   .ExpenseItem li {
     list-style: none;
-    border-bottom: 2px solid rgb(250, 247, 247);
   }
   
   .ExpenseItem div {
@@ -30,7 +29,4 @@
   .ExpenseItem button:hover,
   button.hover {
     background-color: rgb(171, 102, 11);
-  }
-   buttons{
-    background-color: red;
   }

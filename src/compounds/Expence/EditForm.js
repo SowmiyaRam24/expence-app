@@ -33,7 +33,7 @@ const EditForm = (props) => {
     dispatch(editExpenseFetching(expenseItem, props.email));
     setTimeout(() => {
       props.onClose();
-    }, 1000);
+    }, 100);
   };
 
   const Overlay = () => {

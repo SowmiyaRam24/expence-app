@@ -4,17 +4,17 @@ import { Link, useHistory } from "react-router-dom";
 // import LoginContext from "../../Context/LoginContext";
 // import classes from "./SignIn.module.css";
 import Form from "../Pages/Form";
-// import { useDispatch } from "react-redux";
-// import { AuthActions } from "../../Store/AuthReducer";
+import { useDispatch } from "react-redux";
+import { AuthActions } from "../../store/AuthReducer";
 import Button from '../Pages/Button';
-import Header from "../Pages/header";
+
 
 const SignIn = () => {
   const emailRef = useRef("");
   const pswdRef = useRef("");
 
-  // const history = useHistory("");
-  // const dispatch = useDispatch();
+  const history = useHistory("");
+  const dispatch = useDispatch();
 
   // const loginCtx = useContext(LoginContext);
 
@@ -48,9 +48,9 @@ const SignIn = () => {
       pswdRef.current.value = "";
 
       // loginCtx.login(data.email, data.idToken);
-      // dispatch(AuthActions.login({ email: data.email, idToken: data.idToken }));
+      dispatch(AuthActions.login({ email: data.email, idToken: data.idToken }));
 
-      // history.replace("/welcome");
+      history.replace("/welcome");
     } else {
       alert(data.error.message);
     }
@@ -58,7 +58,7 @@ const SignIn = () => {
   return (
     <>
 
-    <Header/>
+    
     <Form onSubmit={signInSubmitHandler}>
       <div>
         <h3>Sign In</h3>
